@@ -9522,6 +9522,9 @@ button.bg-dark:focus {
 .text-primary {
   color: #1cc88a !important;
 }
+.text-blue {
+  color: #224abe !important;
+}
 
 a.text-primary:hover, a.text-primary:focus {
   color: #224abe !important;
@@ -9964,11 +9967,11 @@ a:focus {
 }
 
 .border-left-primary {
-  border-left: 0.25rem solid #1cc88a !important;
+  border-left: 0.25rem solid #224abe !important;
 }
 
 .border-bottom-primary {
-  border-bottom: 0.25rem solid #1cc88a !important;
+  border-bottom: 0.25rem solid #224abe !important;
 }
 
 .border-left-secondary {

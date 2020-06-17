@@ -63,7 +63,7 @@
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#">
+            <a class="nav-link collapsed" href="findAI.php">
                 <i class="fas fa-fw fa-money-bill-wave"></i>
                 <span>Angel Investors</span>
             </a>
@@ -71,14 +71,14 @@
 
         <!-- Nav Item - Charts -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="charts.html">
+            <a class="nav-link collapsed" href="findBP.php">
                 <i class="fas fa-fw fa-chalkboard-teacher"></i>
                 <span>Business Professionals</span></a>
         </li>
 
         <!-- Nav Item - Tables -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="tables.html">
+            <a class="nav-link collapsed" href="findComp.php">
                 <i class="fas fa-fw fa-user-friends"></i>
                 <span>Companies</span></a>
         </li>

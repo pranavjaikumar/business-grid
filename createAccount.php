@@ -3,7 +3,7 @@
     $last_name = $_POST('last_name');
     $email = $_POST('email');
     $password = $_POST('password');
-    $confirm = $_POST('confirm_password');
+    $confirm = $_POST('confirm');
     $type = $_POST('type');
     if (password != confirm) {
         header("Location: register.html");

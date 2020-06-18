@@ -56,13 +56,13 @@
                   </div>
                 </div>
                 <!-- Choose type -->
-                <div class="form-group row">
-                  <input type="radio" class="form-control form-control-user" id="startup" name="type" value="startup">
-                  <label for="startup">Startup</label><br>
-                  <input type="radio" class="form-control form-control-user" id="investor" name="type" value="investor">
-                  <label for="investor">Angel Investor</label><br>
-                  <input type="radio" class="form-control form-control-user" id="professional" name="type" value="professional">
-                  <label for="professional">Professional</label><br>
+                <div class="form-group">
+                  <input class="form-control form-control-user" list="busTypes" name="types" id="busType" placeholder="Business Type">
+                  <datalist id="busTypes">
+                    <option value="Startup">
+                    <option value="Angel Investor">
+                    <option value="Business Professional">
+                  </datalist>
                 </div>
                 <a href="index.php" class="btn btn-primary btn-user btn-block">
                   Register Account

@@ -1,6 +1,4 @@
 <?php
-    $count = 0;
-    $user = $_POST('user');
     $first_name = $_POST('first_name');
     $last_name = $_POST('last_name');
     $email = $_POST('email');
@@ -21,7 +19,7 @@
 
     // USe mysql_real_escape_string for further injection protection
 
-    mysql_connect("localhost", "root", "root");
+    mysql_connect("localhost", "root", "");
     mysql_select_db("business_grid");
 
     mysql_query("insert into users values ('$count++', '$first_name', '$last_name', '$email', '$password', '$type'")

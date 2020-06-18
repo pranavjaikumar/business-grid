@@ -5,24 +5,20 @@
     $password = $_POST('password');
     $confirm = $_POST('confirm');
     $type = $_POST('type');
-    if (password != confirm) {
-        header("Location: register.html");
-        exit;
-    }
 
-    // SQL Injection prevention 
+    /**SQL Injection prevention 
     $user = stripcslashes($user);
     $first_name = stripcslashes($first_name);
     $last_name = stripcslashes($last_name);
     $email = stripcslashes($email);
     $password = stripcslashes($password);
+    */
 
     // USe mysql_real_escape_string for further injection protection
 
-    mysql_connect("localhost", "root", "");
-    mysql_select_db("business_grid");
+    $link = mysqli_connect("localhost", "root", "root", "business_grid");
 
-    mysql_query("insert into users values ('$count++', '$first_name', '$last_name', '$email', '$password', '$type'")
+    mysqli_query($link, "insert into users (first_name, last_name, email, password, type) values ('$first_name', '$last_name', '$email', '$password', '$type'")
         or die("Error ".mysql_error());
-    header("Location: index.html");
+    
 ?>

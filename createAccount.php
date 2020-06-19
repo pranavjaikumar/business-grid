@@ -1,17 +1,11 @@
 <?php
-    $first_name = $_POST["first_name"];
+    $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $confirm = $_POST['confirm'];
     $type = $_POST['type'];
-    
-    echo $first_name;
-    echo $last_name;
-    echo $email;
-    echo $password;
-    echo $confirm;
-    echo $type;
+
     /**SQL Injection prevention 
     $user = stripcslashes($user);
     $first_name = stripcslashes($first_name);
@@ -26,6 +20,5 @@
 
     mysqli_query($link, "insert into users (first_name, last_name, email, password, type) values ('$first_name', '$last_name', '$email', '$password', '$type')");
         //or die("Error ".mysql_error());
-    
-    
+    header('Location: index.php');
 ?>

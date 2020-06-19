@@ -16,7 +16,7 @@
 
     // USe mysql_real_escape_string for further injection protection
 
-    $link = mysqli_connect("localhost", "root", "root", "business_grid");
+    include("config.php");
 
     mysqli_query($link, "insert into users (first_name, last_name, email, password, type) values ('$first_name', '$last_name', '$email', '$password', '$type')");
         //or die("Error ".mysql_error());

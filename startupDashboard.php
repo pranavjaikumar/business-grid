@@ -100,7 +100,11 @@
             <a class="nav-link collapsed" href="#">
                 <i class="fas fa-fw fa-wrench"></i>
                 <!-- Insert in Server Company profile -->
-                <span>Blank's Profile</span>
+                <span>
+                    <?php 
+                        echo $_SESSION["first_name"] . "'s Profile";
+                    ?>
+                </span>
             </a>
         </li>
 

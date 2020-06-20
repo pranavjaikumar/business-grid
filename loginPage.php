@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Login</title>
+  <title>The Business Network</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -20,7 +20,14 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="">
+<style>
+    body {
+        background: url("https://besthqwallpapers.com/img/original/68983/microchip-neon-lines-black-background-chips-technology-backgrounds.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+</style>
 
   <div class="container">
 
@@ -54,10 +61,10 @@
                     </div>
                       <input type="submit" name="Login" value="Login" class="btn btn-primary btn-user btn-block">
                     <hr>
-                    <a href="index.php" class="btn btn-google btn-user btn-block">
+                    <a href="loginPage.php" class="btn btn-google btn-user btn-block">
                       <i class="fab fa-google fa-fw"></i> Login with Google
                     </a>
-                    <a href="index.php" class="btn btn-facebook btn-user btn-block">
+                    <a href="loginPage.php" class="btn btn-facebook btn-user btn-block">
                       <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
                     </a>
                   </form>

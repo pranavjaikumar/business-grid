@@ -20,5 +20,5 @@ $password = stripcslashes($password);
 
 mysqli_query($link, "insert into users (first_name, last_name, email, password, type) values ('$first_name', '$last_name', '$email', '$password', '$type')");
 //or die("Error ".mysql_error());
-header('Location: index.php');
+header('Location: loginPage.php');
 ?>

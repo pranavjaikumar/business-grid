@@ -16,11 +16,12 @@ session_start();
             header("Location: startupDashboard.php");
         } else if ($row['type'] == "Business Professional") {
             header("Location: bpDashboard.php");
-        } else {
+        } else if ($row['type'] == "Angel Investor") {
             header("Location: aiDashboard.php");
+        } else {
+            header('Location: index.php');
         }
     } else {
-        $_SESSION["id"] = $row['id'];
         header('Location: index.php');
     }
 

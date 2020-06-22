@@ -1,14 +1,15 @@
 <?php
-include('config.php');
-session_start();
+    include('config.php');
+    session_start();
 
     $email = $_POST['email'];
     $password = $_POST['password'];
+
     //$password_hashed = password_hash($password, PASSWORD_BCRYPT);
 
-    $query = mysqli_query($link, "SELECT * FROM users WHERE email = '$email' and password = '$password'");
+    $query = mysqli_query($link, "SELECT * FROM users WHERE email = '$email'");
     $row = mysqli_fetch_array($query);
-    if ($row['email'] == $email && $row['password'] == $password) {
+    if ($row['email'] == $email && password_verify($password, $row['password'])) {
         $_SESSION["id"] = $row['id'];
         $_SESSION["first_name"] = $row['first_name'];
         $_SESSION["last_name"] = $row['last_name'];
@@ -18,11 +19,9 @@ session_start();
             header("Location: bpDashboard.php");
         } else if ($row['type'] == "Angel Investor") {
             header("Location: aiDashboard.php");
-        } else {
-            header('Location: index.php');
         }
     } else {
-        header('Location: index.php');
+        header('Location: loginPage.php');
     }
 
 ?>

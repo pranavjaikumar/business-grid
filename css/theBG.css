@@ -57,7 +57,7 @@ html {
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
-.bg-login-image {
+.bg-login-ima {
   background-image: url("img/handshake.jpg");
   background-position: center;
   background-size: cover;

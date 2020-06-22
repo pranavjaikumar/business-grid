@@ -20,15 +20,12 @@
 
 </head>
 
-<body class="">
+<body class="bg-login-screen">
 <style>
-    body {
-        background: url("https://besthqwallpapers.com/img/original/68983/microchip-neon-lines-black-background-chips-technology-backgrounds.jpg");
-        background-position: center;
-        background-size: cover;
-    }
+  body {
+    background-color: #0099ff;
+  }
 </style>
-
   <div class="container">
 
     <!-- Outer Row -->
@@ -40,7 +37,15 @@
           <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row">
-              <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+              <div class="col-lg-6 d-none d-lg-block bg-login-ima">
+                <style>
+                  .bg-login-ima {
+                    background-image: url("img/handshake.jpg");
+                    background-position: center;
+                    background-size: cover;
+                  }
+              </style>
+              </div>
               <div class="col-lg-6">
                 <div class="p-5">
                   <div class="text-center">
@@ -61,10 +66,10 @@
                     </div>
                       <input type="submit" name="Login" value="Login" class="btn btn-primary btn-user btn-block">
                     <hr>
-                    <a href="loginPage.php" class="btn btn-google btn-user btn-block">
+                    <a href="loginPage.html" class="btn btn-google btn-user btn-block">
                       <i class="fab fa-google fa-fw"></i> Login with Google
                     </a>
-                    <a href="loginPage.php" class="btn btn-facebook btn-user btn-block">
+                    <a href="loginPage.html" class="btn btn-facebook btn-user btn-block">
                       <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
                     </a>
                   </form>

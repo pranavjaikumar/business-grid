@@ -21,7 +21,7 @@
             header("Location: aiDashboard.php");
         }
     } else {
-        header('Location: loginPage.php');
+        header('Location: loginPage.html');
     }
 
 ?>

@@ -34,7 +34,7 @@ if (!empty($_POST['register'])) {
     } else if ($type == "Angel Investor") {
         header("Location: aiSetup.html");
     } else {
-        header("Location: loginPage.php");
+        header("Location: loginPage.html");
     }
     exit();
 } else if (!empty($_POST['startupSetup'])) {
@@ -67,5 +67,5 @@ if (!empty($_POST['register'])) {
 }
 $_SESSION = array();
 session_destroy();
-header("Location: loginPage.php");
+header("Location: loginPage.html");
 ?>

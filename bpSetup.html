@@ -32,19 +32,19 @@
                 <div class="col-lg-7">
                     <div class="p-5">
                         <div class="text-center">
-                            <h1 class="h4 text-gray-900 mb-4">Setup your Account!</h1>
+                            <h1 class="h4 text-gray-900 mb-4">SetUp your Account!</h1>
                         </div>
                         <form class="user" action="createAccount.php" method="post">
                             <div class="form-group">
-                                <input class="form-control form-control-user" list="expTypes" name="invType" id="expType" placeholder="Experience with Angel investing">
-                                <datalist id="expTypes">
-                                    <option value="I consistently invest in Startups and I am very comfortable with angel investing">
-                                    <option value="I have invested in Startups before">
-                                    <option value="I have no experience but I want to get started">
+                                <input class="form-control form-control-user" list="exTypes" name="exType" id="exType" placeholder="Experience">
+                                <datalist id="exTypes">
+                                    <option value="University Student">
+                                    <option value="1 - 5 years of experience ">
+                                    <option value="5 years + experience">
                                 </datalist>
                             </div>
                             <div class="form-group">
-                                <input class="form-control form-control-user" list="secTypes" name="secType" id="secType" placeholder="What sector are you most likely to invest in?">
+                                <input class="form-control form-control-user" list="secTypes" name="secType" id="secType" placeholder="What is your expertise?">
                                 <datalist id="secTypes">
                                     <option value="Technology">
                                     <option value="E-commerce">
@@ -59,10 +59,9 @@
                             </div>
 
                             <div class="form-group">
-                                <input class="form-control form-control-user" list="invTypes" name="invType" id="stratType" placeholder="What is your Investment Strategy?">
+                                <input class="form-control form-control-user" list="invTypes" name="invType" id="stratType" placeholder="How would you like to be compensated?">
                                 <datalist id="invTypes">
-                                    <option value="Short Term: Less than 6 months ROI">
-                                    <option value="Long Term: 6 months to 2 years">
+                                    <option value="Hourly">
                                     <option value="Equity: Stake in the company">
                                 </datalist>
                             </div>
@@ -77,17 +76,20 @@
                             </div>
                             <!-- Choose type -->
                             <div class="form-group">
-                                <input class="form-control form-control-user" list="busTypes" name="busType" id="busType" placeholder="How much are you willing to invest">
+                                <input class="form-control form-control-user" list="busTypes" name="busType" id="busType" placeholder="What sevices do you offer">
                                 <datalist id="busTypes">
-                                    <option value="Up to $1,000">
-                                    <option value="Up to $5,000">
-                                    <option value="Up to $10,000">
-                                    <option value="Up to $50,000">
-                                    <option value="$50,000+">
+                                    <option value="Copywriter">
+                                    <option value="Business Advisor">
+                                    <option value="Risk Analysis">
+                                    <option value="Marketing">
+                                    <option value="Writer">
+                                    <option value="Website Design">
+                                    <option value="Graphic Design">
+                                    <option value="Tech Support">
                                 </datalist>
                             </div>
                             <div class="form-group">
-                                <input type="submit" value="aSetup" class="btn btn-primary btn-user btn-block">
+                                <input type="submit" value="Finish SetUp" class="btn btn-primary btn-user btn-block">
                             </div>
 
                         </form>

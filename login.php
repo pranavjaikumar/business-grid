@@ -9,7 +9,7 @@
 
     $query = mysqli_query($link, "SELECT * FROM users WHERE email = '$email'");
     $row = mysqli_fetch_array($query);
-    if ($row['email'] == $email && password_verify($password, $row['password'])) {
+    if (password_verify($password, $row['password'])) {
         $_SESSION["id"] = $row['id'];
         $_SESSION["first_name"] = $row['first_name'];
         $_SESSION["last_name"] = $row['last_name'];
@@ -17,7 +17,7 @@
             header("Location: startupDashboard.php");
         } else if ($row['type'] == "Business Professional") {
             header("Location: bpDashboard.php");
-        } else if ($row['type'] == "Angel Investor") {
+        } else {
             header("Location: aiDashboard.php");
         }
     } else {

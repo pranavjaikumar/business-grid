@@ -36,7 +36,7 @@
                         </div>
                         <form class="user" action="process.php" method="post">
                             <div class="form-group">
-                                <input class="form-control form-control-user" list="exTypes" name="exType" id="exType" placeholder="How long has your start up existed">
+                                <input class="form-control form-control-user" list="exTypes" name="experience" id="exType" placeholder="How long has your startup existed">
                                 <datalist id="exTypes">
                                     <option value="Less than 6 months">
                                     <option value="6 months to 2 years">
@@ -44,7 +44,7 @@
                                 </datalist>
                             </div>
                             <div class="form-group">
-                                <input class="form-control form-control-user" list="secTypes" name="secType" id="secType" placeholder="What is your start up's sector">
+                                <input class="form-control form-control-user" list="secTypes" name="sector" id="secType" placeholder="What is your startup's sector">
                                 <datalist id="secTypes">
                                     <option value="Technology">
                                     <option value="E-commerce">
@@ -59,27 +59,27 @@
                             </div>
 
                             <div class="form-group">
-                                <input class="form-control form-control-user" list="invTypes" name="invType" id="stratType" placeholder="What are you looking for?">
+                                <input class="form-control form-control-user" list="invTypes" name="strategy" id="stratType" placeholder="What describes you best?">
                                 <datalist id="invTypes">
-                                    <option value="I have an idea and I want to use the resources in order to make my idea a reality">
-                                    <option value="I have a start up and I want to better my product/service">
+                                    <option value="I have an idea, but I need resources to make it a reality">
+                                    <option value="I have a startup, and I want expertise to better my product/service">
                                     <option value="I am looking for an angel investor">
-                                    <option value="I am looking for an angel investor and business professionals">
+                                    <option value="I am looking for an angel investor and business expertise">
 
                                 </datalist>
                             </div>
                             <!-- End Choose type -->
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Earnings in the past year" name = "earnings">
+                                    <input type="number" class="form-control form-control-user" id="earnings" placeholder="Earnings in the past year" name = "earnings">
                                 </div>
                                 <div class="col-sm-6">
-                                    <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Spending in the past year" name = "spending">
+                                    <input type="number" class="form-control form-control-user" id="spending" placeholder="Spending in the past year" name = "spending">
                                 </div>
                             </div>
                             <!-- Choose type -->
                             <div class="form-group">
-                                <input class="form-control form-control-user" list="busTypes" name="busType" id="busType" placeholder="What sevices are you looking for">
+                                <input class="form-control form-control-user" list="busTypes" name="service" id="busType" placeholder="What sevices are you looking for?">
                                 <datalist id="busTypes">
                                     <option value="Copywriter">
                                     <option value="Business Advisor">

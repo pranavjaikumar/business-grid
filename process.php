@@ -20,14 +20,13 @@ if (!empty($_POST['register'])) {
 
     // USe mysql_real_escape_string for further injection protection
 
-    mysqli_query($link, "insert into users (first_name, last_name, email, password, type) values ('$first_name', '$last_name', '$email', '$password_hashed', '$type')");
+    mysqli_query($link, "INSERT INTO users (first_name, last_name, email, password, type) VALUES ('$first_name', '$last_name', '$email', '$password_hashed', '$type')");
     $query = mysqli_query($link, "SELECT * FROM users WHERE email = '$email'");
     $row = mysqli_fetch_array($query);
     $_SESSION["id"] = $row['id'];
     $_SESSION["first_name"] = $row['first_name'];
     $_SESSION["last_name"] = $row['last_name'];
     //or die("Error ".mysql_error());
-    header('Location: loginPage.php');
     if ($type == "Startup") {
         header("Location: startUpSetup.html");
     } else if ($type == "Business Professional") {
@@ -37,13 +36,36 @@ if (!empty($_POST['register'])) {
     } else {
         header("Location: loginPage.php");
     }
-} else if (!empty($_POST['aiSetup'])) {
-    
-
+    exit();
+} else if (!empty($_POST['startupSetup'])) {
+    $id = $_SESSION['id'];
+    $experience = $_POST["experience"];
+    $sector = $_POST["sector"];
+    $strategy = $_POST["strategy"];
+    $earnings = $_POST["earnings"];
+    $spending = $_POST["spending"];
+    $service = $_POST["service"];
+    mysqli_query($link, "INSERT INTO startup_profile VALUES ('$id', '$experience', '$sector', '$strategy', '$earnings', '$spending', '$service')");
 } else if (!empty($_POST['bpSetup'])) {
-
-} else {
-
-
+    $id = $_SESSION['id'];
+    $experience = $_POST["experience"];
+    $sector = $_POST["sector"];
+    $payment = $_POST["payment"];
+    $employer = $_POST["employer"];
+    $title = $_POST["title"];
+    $service = $_POST["service"];
+    mysqli_query($link, "INSERT INTO bp_profile VALUES ('$id', '$experience', '$sector', '$payment', '$employer', '$title', '$service')");
+} else if (!empty($_POST['aiSetup'])) {
+    $id = $_SESSION['id'];
+    $experience = $_POST["experience"];
+    $sector = $_POST["sector"];
+    $commitment = $_POST["commitment"];
+    $employer = $_POST["employer"];
+    $title = $_POST["title"];
+    $investment = $_POST["investment"];
+    mysqli_query($link, "INSERT INTO ai_profile VALUES ('$id', '$experience', '$sector', '$commitment', '$employer', '$title', '$investment')");
 }
+$_SESSION = array();
+session_destroy();
+header("Location: loginPage.php");
 ?>

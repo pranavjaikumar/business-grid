@@ -19,10 +19,10 @@ session_start();
         } else if ($row['type'] == "Angel Investor") {
             header("Location: aiDashboard.php");
         } else {
-            header('Location: index.php');
+            header("Location: loginPage.php");
         }
     } else {
-        header('Location: index.php');
+        header("Location: loginPage.php");
     }
 
 ?>

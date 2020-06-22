@@ -21,4 +21,13 @@ $password = stripcslashes($password);
 mysqli_query($link, "insert into users (first_name, last_name, email, password, type) values ('$first_name', '$last_name', '$email', '$password', '$type')");
 //or die("Error ".mysql_error());
 header('Location: loginPage.php');
+if ($type == "Startup") {
+    header("Location: startUpSetup.html");
+} else if ($type == "Business Professional") {
+    header("Location: bpSetup.html");
+} else if ($type == "Angel Investor") {
+    header("Location: aiSetup.html");
+} else {
+    header("Location: loginPage.php");
+}
 ?>

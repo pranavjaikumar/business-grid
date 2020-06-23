@@ -368,7 +368,7 @@
                                                 $id = $_SESSION['id'];
                                                 $result = mysqli_query($link, "SELECT * FROM startup_profile WHERE id = '$id'");
                                                 $row = mysqli_fetch_array($result);
-                                                echo "$" . number_format($row['spending'], 2);
+                                                echo "$" . number_format($row['spending'], 0);
                                             ?>
                                         </div>
                                     </div>

@@ -10096,7 +10096,7 @@ hr.light {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background: linear-gradient(to bottom, rgba(100, 100, 100, 0.8) 1000%, rgba(100, 100, 100, 0.8) 100%), url("https://base.imgix.net/files/base/ebm/ehstoday/image/2019/03/ehstoday_8410_success.png?auto=format&fit=max&w=1200");
+  background: linear-gradient(to bottom, rgba(100, 100, 200, 0.8) 100%, rgba(100, 100, 200, 0.8) 100%), url("https://image.freepik.com/free-vector/global-network-connection-world-map-digital-background_1017-23322.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;

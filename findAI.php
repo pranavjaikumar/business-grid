@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -420,11 +423,30 @@
                                             <div class="card-body">
                                                 <a style="color: limegreen" class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="fas fa-user fa-sm"></i>
-                                                    <span>John Doe</span>
+                                                    <span>
+                                                        <?php
+                                                            include "config.php";
+                                                            $investor_profiles = mysqli_query($link, "SELECT * FROM ai_profile");
+                                                            $profile = mysqli_fetch_array($investor_profiles);
+                                                            $id = $profile['id'];
+                                                            $investor_user = mysqli_query($link, "SELECT * FROM users WHERE id = '$id'");
+                                                            $user = mysqli_fetch_array($investor_user);
+                                                            echo $user['first_name'] . " " . $user['last_name'];
+                                                        ?>
+                                                    </span>
                                                     <ul>
                                                         <li>Expertise: </li>
-                                                        <li>Value: </li>
-                                                        <li>Network: </li>
+                                                        <?php
+                                                            echo $profile['sector'];
+                                                        ?>
+                                                        <li>Capital Willing to Invest: </li>
+                                                        <?php
+                                                            echo $profile['investment'];
+                                                        ?>
+                                                        <li>Current Position: </li>
+                                                        <?php
+                                                            echo $profile['title'] . " at " . $profile['employer'];
+                                                        ?>
                                                     </ul>
                                                     <i class="fas fa-mail-bulk fa-lg"></i>
                                                     <span>Click to Connect</span>
@@ -437,11 +459,39 @@
                                             <div class="card-body">
                                                 <a style="color: limegreen" class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="fas fa-user fa-sm"></i>
-                                                    <span>John Doe</span>
+                                                    <span>
+                                                        <?php
+                                                            $profile = mysqli_fetch_array($investor_profiles);
+                                                            if ($profile) {
+                                                                $id = $profile['id'];
+                                                                $investor_user = mysqli_query($link, "SELECT * FROM users WHERE id = '$id'");
+                                                                $user = mysqli_fetch_array($investor_user);
+                                                                echo $user['first_name'] . " " . $user['last_name'];
+                                                            } 
+                                                        ?>
+                                                    </span>
                                                     <ul>
-                                                        <li>Expertise: </li>
-                                                        <li>Value: </li>
-                                                        <li>Network: </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Expertise:\n" . $profile['sector']);
+                                                            }
+                                                        ?>
+                                                        </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Capital Willing to Invest:\n" . $profile['investment']);
+                                                            }
+                                                        ?>
+                                                        </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Current Position:\n" . $profile['title'] . " at " . $profile['employer']);
+                                                            }
+                                                        ?>
+                                                        </li>
                                                     </ul>
                                                     <i class="fas fa-mail-bulk fa-lg"></i>
                                                     <span>Click to Connect</span>
@@ -454,11 +504,39 @@
                                             <div class="card-body">
                                                 <a style="color: limegreen" class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="fas fa-user fa-sm"></i>
-                                                    <span>John Doe</span>
+                                                    <span>
+                                                        <?php
+                                                            $profile = mysqli_fetch_array($investor_profiles);
+                                                            if ($profile) {
+                                                                $id = $profile['id'];
+                                                                $investor_user = mysqli_query($link, "SELECT * FROM users WHERE id = '$id'");
+                                                                $user = mysqli_fetch_array($investor_user);
+                                                                echo $user['first_name'] . " " . $user['last_name'];
+                                                            } 
+                                                        ?>
+                                                    </span>
                                                     <ul>
-                                                        <li>Expertise: </li>
-                                                        <li>Value: </li>
-                                                        <li>Network: </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Expertise:\n" . $profile['sector']);
+                                                            }
+                                                        ?>
+                                                        </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Capital Willing to Invest:\n" . $profile['investment']);
+                                                            }
+                                                        ?>
+                                                        </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Current Position:\n" . $profile['title'] . " at " . $profile['employer']);
+                                                            }
+                                                        ?>
+                                                        </li>
                                                     </ul>
                                                     <i class="fas fa-mail-bulk fa-lg"></i>
                                                     <span>Click to Connect</span>
@@ -473,11 +551,39 @@
                                             <div class="card-body">
                                                 <a style="color: limegreen" class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="fas fa-user fa-sm"></i>
-                                                    <span>John Doe</span>
+                                                    <span>
+                                                    <?php
+                                                            $profile = mysqli_fetch_array($investor_profiles);
+                                                            if ($profile) {
+                                                                $id = $profile['id'];
+                                                                $investor_user = mysqli_query($link, "SELECT * FROM users WHERE id = '$id'");
+                                                                $user = mysqli_fetch_array($investor_user);
+                                                                echo $user['first_name'] . " " . $user['last_name'];
+                                                            } 
+                                                        ?>
+                                                    </span>
                                                     <ul>
-                                                        <li>Expertise: </li>
-                                                        <li>Value: </li>
-                                                        <li>Network: </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Expertise:\n" . $profile['sector']);
+                                                            }
+                                                        ?>
+                                                        </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Capital Willing to Invest:\n" . $profile['investment']);
+                                                            }
+                                                        ?>
+                                                        </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Current Position:\n" . $profile['title'] . " at " . $profile['employer']);
+                                                            }
+                                                        ?>
+                                                        </li>
                                                     </ul>
                                                     <i class="fas fa-mail-bulk fa-lg"></i>
                                                     <span>Click to Connect</span>
@@ -490,11 +596,39 @@
                                             <div class="card-body">
                                                 <a style="color: limegreen" class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="fas fa-user fa-sm"></i>
-                                                    <span>John Doe</span>
+                                                    <span>
+                                                    <?php
+                                                            $profile = mysqli_fetch_array($investor_profiles);
+                                                            if ($profile) {
+                                                                $id = $profile['id'];
+                                                                $investor_user = mysqli_query($link, "SELECT * FROM users WHERE id = '$id'");
+                                                                $user = mysqli_fetch_array($investor_user);
+                                                                echo $user['first_name'] . " " . $user['last_name'];
+                                                            } 
+                                                        ?>
+                                                    </span>
                                                     <ul>
-                                                        <li>Expertise: </li>
-                                                        <li>Value: </li>
-                                                        <li>Network: </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Expertise:\n" . $profile['sector']);
+                                                            }
+                                                        ?>
+                                                        </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Capital Willing to Invest:\n" . $profile['investment']);
+                                                            }
+                                                        ?>
+                                                        </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Current Position:\n" . $profile['title'] . " at " . $profile['employer']);
+                                                            }
+                                                        ?>
+                                                        </li>
                                                     </ul>
                                                     <i class="fas fa-mail-bulk fa-lg"></i>
                                                     <span>Click to Connect</span>
@@ -507,11 +641,39 @@
                                             <div class="card-body">
                                                 <a style="color: limegreen" class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="fas fa-user fa-sm"></i>
-                                                    <span>John Doe</span>
+                                                    <span>
+                                                    <?php
+                                                            $profile = mysqli_fetch_array($investor_profiles);
+                                                            if ($profile) {
+                                                                $id = $profile['id'];
+                                                                $investor_user = mysqli_query($link, "SELECT * FROM users WHERE id = '$id'");
+                                                                $user = mysqli_fetch_array($investor_user);
+                                                                echo $user['first_name'] . " " . $user['last_name'];
+                                                            } 
+                                                        ?>
+                                                    </span>
                                                     <ul>
-                                                        <li>Expertise: </li>
-                                                        <li>Value: </li>
-                                                        <li>Network: </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Expertise:\n" . $profile['sector']);
+                                                            }
+                                                        ?>
+                                                        </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Capital Willing to Invest:\n" . $profile['investment']);
+                                                            }
+                                                        ?>
+                                                        </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Current Position:\n" . $profile['title'] . " at " . $profile['employer']);
+                                                            }
+                                                        ?>
+                                                        </li>
                                                     </ul>
                                                     <i class="fas fa-mail-bulk fa-lg"></i>
                                                     <span>Click to Connect</span>

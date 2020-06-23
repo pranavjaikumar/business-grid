@@ -27,16 +27,16 @@ session_start();
 
 <!-- Page Wrapper -->
 <div id="wrapper">
-    <style>
-        .primary-background {
-            background-color: #1cc88a;
-            background-image: linear-gradient(180deg, #61E8C6 1%, #1cc88a 100%);
-            background-size: cover;
-        }
-    </style>
 
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion primary-background" id="accordionSidebar">
+        <style>
+            .primary-background {
+                background-color: #0099ff;
+                background-image: linear-gradient(180deg, #00c3ff 1%, #0099ff 100%);
+                background-size: cover;
+            }
+        </style>
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="AboutUs.html">
@@ -50,7 +50,7 @@ session_start();
         <hr class="sidebar-divider my-0">
 
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item active" href = "startupDashboard.php">
+        <li class="nav-item active" href = "aiDashboard.php">
             <a class="nav-link">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>

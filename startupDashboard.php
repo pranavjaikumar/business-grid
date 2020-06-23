@@ -362,7 +362,15 @@
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-blue text-uppercase mb-1">Monthly Spending (Avg)</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            <?php
+                                                include "config.php";
+                                                $id = $_SESSION['id'];
+                                                $result = mysqli_query($link, "SELECT * FROM startup_profile WHERE id = '$id'");
+                                                $row = mysqli_fetch_array($result);
+                                                echo "$" . number_format($row['spending'], 2);
+                                            ?>
+                                        </div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-calendar fa-2x text-gray-300"></i>

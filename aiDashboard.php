@@ -50,7 +50,7 @@ session_start();
         <hr class="sidebar-divider my-0">
 
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item active" href = "startupDashboard.php">
+        <li class="nav-item active" href = "aiDashboard.php">
             <a class="nav-link">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>

@@ -325,12 +325,32 @@ session_start();
                                     <div class="col-lg-9">
                                         <div class="p-5">
                                             <div class="text-center">
-                                                <h1 class="h4 text-gray-900 mb-4">Name</h1>
+                                                <h1 class="h4 text-gray-900 mb-4">
+                                                    <?php
+                                                        echo $_SESSION['first_name'] . " " . $_SESSION['last_name'];
+                                                    ?>
+                                                </h1>
                                             </div>
                                             <div class="text-left">
-                                                <h3 class="h6 text-gray-900 mb-4">Profession</h3>
-                                                <h3 class="h6 text-gray-900 mb-4">Title</h3>
-                                                <h3 class="h6 text-gray-900 mb-4">Expertise</h3>
+                                                <h3 class="h6 text-gray-900 mb-4">
+                                                    <?php
+                                                        include "config.php";
+                                                        $id = $_SESSION['id'];
+                                                        $bp_profiles = mysqli_query($link, "SELECT * FROM bp_profile WHERE id='$id'");
+                                                        $profile = mysqli_fetch_array($bp_profiles);
+                                                        echo "Company: " . $profile['employer'];
+                                                    ?>
+                                                </h3>
+                                                <h3 class="h6 text-gray-900 mb-4">
+                                                    <?php
+                                                        echo "Title: " . $profile['title'];
+                                                    ?>
+                                                </h3>
+                                                <h3 class="h6 text-gray-900 mb-4">
+                                                    <?php
+                                                        echo "Expertise: " . $profile['service'];
+                                                    ?>
+                                                </h3>
                                             </div>
                                             <hr>
                                         </div>

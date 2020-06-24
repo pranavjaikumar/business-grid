@@ -100,7 +100,11 @@
             <a class="nav-link collapsed" href="#">
                 <i class="fas fa-fw fa-wrench"></i>
                 <!-- Insert in Server Company profile -->
-                <span>Blank's Profile</span>
+                <span>
+                    <?php 
+                        echo $_SESSION["first_name"] . "'s Profile";
+                    ?>
+                </span>
             </a>
         </li>
 
@@ -289,7 +293,11 @@
                     <!-- Nav Item - User Information -->
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                                <?php 
+                                    echo $_SESSION["first_name"] . " " .  $_SESSION["last_name"];
+                                ?>
+                            </span>
                             <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
                         </a>
                         <!-- Dropdown - User Information -->

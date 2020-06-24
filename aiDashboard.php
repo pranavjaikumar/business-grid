@@ -50,8 +50,8 @@ session_start();
         <hr class="sidebar-divider my-0">
 
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item active" href = "aiDashboard.php">
-            <a class="nav-link">
+        <li class="nav-item active">
+            <a class="nav-link" href = "aiDashboard.php">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
@@ -66,22 +66,15 @@ session_start();
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="findAI.php">
+            <a class="nav-link collapsed" href="aiForum.php">
                 <i class="fas fa-fw fa-money-bill-wave"></i>
-                <span>Angel Investors</span>
+                <span>Investor Forum</span>
             </a>
-        </li>
-
-        <!-- Nav Item - Charts -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="findBP.php">
-                <i class="fas fa-fw fa-chalkboard-teacher"></i>
-                <span>Business Professionals</span></a>
         </li>
 
         <!-- Nav Item - Tables -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="findStartup.php">
+            <a class="nav-link collapsed" href="aiConnect.php">
                 <i class="fas fa-fw fa-user-friends"></i>
                 <span>Startups</span></a>
         </li>

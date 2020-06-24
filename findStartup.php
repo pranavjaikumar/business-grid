@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -97,7 +100,11 @@
             <a class="nav-link collapsed" href="#">
                 <i class="fas fa-fw fa-wrench"></i>
                 <!-- Insert in Server Company profile -->
-                <span>Blank's Profile</span>
+                <span>
+                    <?php 
+                        echo $_SESSION["first_name"] . "'s Profile";
+                    ?>
+                </span>
             </a>
         </li>
 
@@ -286,7 +293,11 @@
                     <!-- Nav Item - User Information -->
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                                <?php 
+                                    echo $_SESSION["first_name"] . " " .  $_SESSION["last_name"];
+                                ?>
+                            </span>
                             <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
                         </a>
                         <!-- Dropdown - User Information -->
@@ -345,7 +356,7 @@
                     <div class="col-xl-4 col-md-6 mb-4">
                         <div class="card">
                             <div class="card-body">
-                                <a style="color: #224abe"  class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a style="color: #224abe" class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fas fa-sort fa-sm"></i>
                                     <span>Sort by Sector</span>
                                 </a>
@@ -370,7 +381,7 @@
                     <div class="col-xl-4 col-md-6 mb-4">
                         <div class="card">
                             <div class="card-body">
-                                <a style="color: goldenrod"  class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a style="color: goldenrod" class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fas fa-filter fa-sm"></i>
                                     <span>Filter</span>
                                 </a>
@@ -418,13 +429,77 @@
                                     <div class="col-xl-4 col-md-6 mb-4">
                                         <div class="card">
                                             <div class="card-body">
-                                                <a style="color: #0099ff"  class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <a style="color: #0099ff" class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="fas fa-user fa-sm"></i>
-                                                    <span>John Doe</span>
+                                                    <span>
+                                                        <?php
+                                                            include "config.php";
+                                                            $startup_profiles = mysqli_query($link, "SELECT * FROM startup_profile");
+                                                            $profile = mysqli_fetch_array($startup_profiles);
+                                                            $id = $profile['id'];
+                                                            $startup_user = mysqli_query($link, "SELECT * FROM users WHERE id = '$id'");
+                                                            $user = mysqli_fetch_array($startup_user);
+                                                            echo $profile['name'];
+                                                        ?>
+                                                    </span>
                                                     <ul>
-                                                        <li>Expertise: </li>
-                                                        <li>Value: </li>
-                                                        <li>Network: </li>
+                                                        <li>Looking for: </li>
+                                                        <?php
+                                                            echo $profile['service'];
+                                                        ?>
+                                                        <li>Primary Sector: </li>
+                                                        <?php
+                                                            echo $profile['sector'];
+                                                        ?>
+                                                        <li>Earnings to date: </li>
+                                                        <?php
+                                                            echo "$" . number_format($profile['earnings']);
+                                                        ?>
+                                                    </ul>
+                                                    <i class="fas fa-mail-bulk fa-lg"></i>
+                                                    <span>Click to Connect</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-md-6 mb-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a style="color: #0099ff" class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fas fa-user fa-sm"></i>
+                                                    <span>
+                                                        <?php
+                                                            $profile = mysqli_fetch_array($startup_profiles);
+                                                            if ($profile) {
+                                                                $id = $profile['id'];
+                                                                $startup_user = mysqli_query($link, "SELECT * FROM users WHERE id = '$id'");
+                                                                $user = mysqli_fetch_array($startup_user);
+                                                                echo $profile['name'];
+                                                            } 
+                                                        ?>
+                                                    </span>
+                                                    <ul>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Looking for:\n" . $profile['service']);
+                                                            }
+                                                        ?>
+                                                        </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Sector:\n" . $profile['sector']);
+                                                            }
+                                                        ?>
+                                                        </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Earnings to date:\n$" . number_format($profile['earnings']));
+                                                            }
+                                                        ?>
+                                                        </li>
                                                     </ul>
                                                     <i class="fas fa-mail-bulk fa-lg"></i>
                                                     <span>Click to Connect</span>
@@ -437,28 +512,39 @@
                                             <div class="card-body">
                                                 <a style="color: #0099ff"  class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="fas fa-user fa-sm"></i>
-                                                    <span>John Doe</span>
+                                                    <span>
+                                                        <?php
+                                                            $profile = mysqli_fetch_array($startup_profiles);
+                                                            if ($profile) {
+                                                                $id = $profile['id'];
+                                                                $startup_user = mysqli_query($link, "SELECT * FROM users WHERE id = '$id'");
+                                                                $user = mysqli_fetch_array($startup_user);
+                                                                echo $profile['name'];
+                                                            } 
+                                                        ?>
+                                                    </span>
                                                     <ul>
-                                                        <li>Expertise: </li>
-                                                        <li>Value: </li>
-                                                        <li>Network: </li>
-                                                    </ul>
-                                                    <i class="fas fa-mail-bulk fa-lg"></i>
-                                                    <span>Click to Connect</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-md-6 mb-4">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <a style="color: #0099ff"  class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <i class="fas fa-user fa-sm"></i>
-                                                    <span>John Doe</span>
-                                                    <ul>
-                                                        <li>Expertise: </li>
-                                                        <li>Value: </li>
-                                                        <li>Network: </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Looking for:\n" . $profile['service']);
+                                                            }
+                                                        ?>
+                                                        </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Sector:\n" . $profile['sector']);
+                                                            }
+                                                        ?>
+                                                        </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Earnings to date:\n$" . number_format($profile['earnings']));
+                                                            }
+                                                        ?>
+                                                        </li>
                                                     </ul>
                                                     <i class="fas fa-mail-bulk fa-lg"></i>
                                                     <span>Click to Connect</span>
@@ -471,13 +557,41 @@
                                     <div class="col-xl-4 col-md-6 mb-4">
                                         <div class="card">
                                             <div class="card-body">
-                                                <a style="color: #0099ff" class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <a style="color: #0099ff"  class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="fas fa-user fa-sm"></i>
-                                                    <span>John Doe</span>
+                                                    <span>
+                                                    <?php
+                                                            $profile = mysqli_fetch_array($startup_profiles);
+                                                            if ($profile) {
+                                                                $id = $profile['id'];
+                                                                $startup_user = mysqli_query($link, "SELECT * FROM users WHERE id = '$id'");
+                                                                $user = mysqli_fetch_array($startup_user);
+                                                                echo $profile['name'];
+                                                            } 
+                                                        ?>
+                                                    </span>
                                                     <ul>
-                                                        <li>Expertise: </li>
-                                                        <li>Value: </li>
-                                                        <li>Network: </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Looking for:\n" . $profile['service']);
+                                                            }
+                                                        ?>
+                                                        </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Sector:\n" . $profile['sector']);
+                                                            }
+                                                        ?>
+                                                        </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Earnings to date:\n$" . number_format($profile['earnings']));
+                                                            }
+                                                        ?>
+                                                        </li>
                                                     </ul>
                                                     <i class="fas fa-mail-bulk fa-lg"></i>
                                                     <span>Click to Connect</span>
@@ -488,13 +602,41 @@
                                     <div class="col-xl-4 col-md-6 mb-4">
                                         <div class="card">
                                             <div class="card-body">
-                                                <a style="color: #0099ff" class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <a style="color: #0099ff"  class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="fas fa-user fa-sm"></i>
-                                                    <span>John Doe</span>
+                                                    <span>
+                                                    <?php
+                                                            $profile = mysqli_fetch_array($startup_profiles);
+                                                            if ($profile) {
+                                                                $id = $profile['id'];
+                                                                $startup_user = mysqli_query($link, "SELECT * FROM users WHERE id = '$id'");
+                                                                $user = mysqli_fetch_array($startup_user);
+                                                                echo $profile['name'];
+                                                            } 
+                                                        ?>
+                                                    </span>
                                                     <ul>
-                                                        <li>Expertise: </li>
-                                                        <li>Value: </li>
-                                                        <li>Network: </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Looking for:\n" . $profile['service']);
+                                                            }
+                                                        ?>
+                                                        </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Sector:\n" . $profile['sector']);
+                                                            }
+                                                        ?>
+                                                        </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Earnings to date:\n$" . number_format($profile['earnings']));
+                                                            }
+                                                        ?>
+                                                        </li>
                                                     </ul>
                                                     <i class="fas fa-mail-bulk fa-lg"></i>
                                                     <span>Click to Connect</span>
@@ -505,13 +647,41 @@
                                     <div class="col-xl-4 col-md-6 mb-4">
                                         <div class="card">
                                             <div class="card-body">
-                                                <a style="color: #0099ff" class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <a style="color: #0099ff"  class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="fas fa-user fa-sm"></i>
-                                                    <span>John Doe</span>
+                                                    <span>
+                                                    <?php
+                                                            $profile = mysqli_fetch_array($startup_profiles);
+                                                            if ($profile) {
+                                                                $id = $profile['id'];
+                                                                $startup_user = mysqli_query($link, "SELECT * FROM users WHERE id = '$id'");
+                                                                $user = mysqli_fetch_array($startup_user);
+                                                                echo $profile['name'];
+                                                            } 
+                                                        ?>
+                                                    </span>
                                                     <ul>
-                                                        <li>Expertise: </li>
-                                                        <li>Value: </li>
-                                                        <li>Network: </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Looking for:\n" . $profile['service']);
+                                                            }
+                                                        ?>
+                                                        </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Sector:\n" . $profile['sector']);
+                                                            }
+                                                        ?>
+                                                        </li>
+                                                        <li>
+                                                        <?php
+                                                            if ($profile) {
+                                                                echo nl2br("Earnings to date:\n$" . number_format($profile['earnings']));
+                                                            }
+                                                        ?>
+                                                        </li>
                                                     </ul>
                                                     <i class="fas fa-mail-bulk fa-lg"></i>
                                                     <span>Click to Connect</span>

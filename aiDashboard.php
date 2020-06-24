@@ -81,9 +81,9 @@ session_start();
 
         <!-- Nav Item - Tables -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="findComp.php">
+            <a class="nav-link collapsed" href="findStartup.php">
                 <i class="fas fa-fw fa-user-friends"></i>
-                <span>Companies</span></a>
+                <span>Startups</span></a>
         </li>
 
         <!-- Divider -->

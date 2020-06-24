@@ -50,7 +50,7 @@ session_start();
         <hr class="sidebar-divider my-0">
 
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item active" href = "startupDashboard.php">
+        <li class="nav-item active" href = "bpDashboard.php">
             <a class="nav-link">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
@@ -66,14 +66,14 @@ session_start();
 
         <!-- Nav Item - Charts -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="findBP.php">
+            <a class="nav-link collapsed" href="bpForum.php">
                 <i class="fas fa-fw fa-chalkboard-teacher"></i>
                 <span>Professionals Forum</span></a>
         </li>
 
         <!-- Nav Item - Tables -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="findStartup.php">
+            <a class="nav-link collapsed" href="bpConnect.php">
                 <i class="fas fa-fw fa-user-friends"></i>
                 <span>Startups</span></a>
         </li>

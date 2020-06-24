@@ -50,7 +50,7 @@
         <hr class="sidebar-divider my-0">
 
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link" href="startupDashboard.php">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
@@ -64,12 +64,18 @@
             Connect
         </div>
 
-        <!-- Nav Item - Pages Collapse Menu -->
+        <!-- Nav Item - Charts -->
         <li class="nav-item">
             <a class="nav-link collapsed" href="findAI.php">
                 <i class="fas fa-fw fa-money-bill-wave"></i>
-                <span>Angel Investors</span>
-            </a>
+                <span>Angel Investors</span></a>
+        </li>
+
+        <!-- Nav Item - Charts -->
+        <li class="nav-item active">
+            <a class="nav-link" href="findBP.php">
+                <i class="fas fa-fw fa-chalkboard-teacher"></i>
+                <span>Business Professionals</span></a>
         </li>
 
         <!-- Nav Item - Tables -->
@@ -90,7 +96,7 @@
 
         <!-- Nav Item - Profile Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#">
+            <a class="nav-link collapsed" href="startupProfile.php">
                 <i class="fas fa-fw fa-wrench"></i>
                 <!-- Insert in Server Company profile -->
                 <span>

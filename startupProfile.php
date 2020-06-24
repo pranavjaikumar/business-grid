@@ -50,8 +50,8 @@ session_start();
         <hr class="sidebar-divider my-0">
 
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item" href="startupDashboard.php">
-            <a class="nav-link">
+        <li class="nav-item">
+            <a class="nav-link" href="startupDashboard.php">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
@@ -81,9 +81,9 @@ session_start();
 
         <!-- Nav Item - Tables -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="findComp.php">
+            <a class="nav-link collapsed" href="findStartup.php">
                 <i class="fas fa-fw fa-user-friends"></i>
-                <span>Companies</span></a>
+                <span>Startups</span></a>
         </li>
 
         <!-- Divider -->

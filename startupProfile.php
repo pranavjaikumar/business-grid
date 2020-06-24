@@ -50,7 +50,7 @@ session_start();
         <hr class="sidebar-divider my-0">
 
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item active" href = "aiDashboard.php">
+        <li class="nav-item" href="startupDashboard.php">
             <a class="nav-link">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
@@ -93,6 +93,18 @@ session_start();
         <div class="sidebar-heading">
             Overview
         </div>
+
+        <li class="nav-item active">
+            <a class="nav-link collapsed" href="startupProfile.php">
+                <i class="fas fa-fw fa-wrench"></i>
+                <!-- Insert in Server Company profile -->
+                <span>
+                    <?php
+                    echo $_SESSION["first_name"] . "'s Profile";
+                    ?>
+                </span>
+            </a>
+        </li>
 
         <!-- Nav Item - Settings Collapse Menu -->
         <li class="nav-item">

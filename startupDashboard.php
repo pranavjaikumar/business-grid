@@ -97,7 +97,7 @@
 
         <!-- Nav Item - Profile Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#">
+            <a class="nav-link collapsed" href="startupProfile.php">
                 <i class="fas fa-fw fa-wrench"></i>
                 <!-- Insert in Server Company profile -->
                 <span>

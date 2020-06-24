@@ -64,19 +64,11 @@ session_start();
             Connect
         </div>
 
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="findAI.php">
-                <i class="fas fa-fw fa-money-bill-wave"></i>
-                <span>Angel Investors</span>
-            </a>
-        </li>
-
         <!-- Nav Item - Charts -->
         <li class="nav-item">
             <a class="nav-link collapsed" href="findBP.php">
                 <i class="fas fa-fw fa-chalkboard-teacher"></i>
-                <span>Business Professionals</span></a>
+                <span>Professionals Forum</span></a>
         </li>
 
         <!-- Nav Item - Tables -->
@@ -93,20 +85,6 @@ session_start();
         <div class="sidebar-heading">
             Overview
         </div>
-
-
-        <!-- Nav Item - Profile Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#">
-                <i class="fas fa-fw fa-wrench"></i>
-                <!-- Insert in Server Company profile -->
-                <span>
-                    <?php
-                    echo $_SESSION["first_name"] . "'s Profile";
-                    ?>
-                </span>
-            </a>
-        </li>
 
         <!-- Nav Item - Settings Collapse Menu -->
         <li class="nav-item">
@@ -327,174 +305,144 @@ session_start();
             <!-- End of Topbar -->
 
             <!-- Begin Page Content -->
+            <!-- Begin Page Content -->
             <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-xl-10 col-lg-12 col-md-9">
+                        <div class="card o-hidden border-0 shadow-lg my-5">
+                            <div class="card-body p-0">
+                                <!-- Nested Row within Card Body -->
+                                <div class="row">
+                                    <div class="col-lg-3 d-none d-lg-block bg-login-ima">
+                                        <style>
+                                            .bg-login-ima {
+                                                background-image: url("img/user.png");
+                                                background-position: center;
+                                                background-size: cover;
+                                            }
+                                        </style>
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <div class="p-5">
+                                            <div class="text-center">
+                                                <h1 class="h4 text-gray-900 mb-4">Name</h1>
+                                            </div>
+                                            <div class="text-left">
+                                                <h3 class="h6 text-gray-900 mb-4">Profession</h3>
+                                                <h3 class="h6 text-gray-900 mb-4">Title</h3>
+                                                <h3 class="h6 text-gray-900 mb-4">Expertise</h3>
+                                            </div>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                <!-- Page Heading -->
-                <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                    </div>
+
                 </div>
 
-                <!-- Content Row -->
+                <!--Content Row -->
                 <div class="row">
 
-                    <!-- Earnings (Monthly) Card Example -->
-                    <div class="col-xl-4 col-md-6 mb-4">
-                        <div class="card border-left-success shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Money Raised</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Earnings (Monthly) Card Example -->
-                    <div class="col-xl-4 col-md-6 mb-4">
-                        <div class="card border-left-primary shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-blue text-uppercase mb-1">Monthly Spending (Avg)</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Pending Requests Card Example -->
-                    <div class="col-xl-4 col-md-6 mb-4">
-                        <div class="card border-left-warning shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Requests</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Content Row -->
-
-                <div class="row">
-
-                    <!-- Area Chart -->
-                    <div class="col-xl-8 col-lg-7">
-                        <div class="card shadow mb-4">
-                            <!-- Card Header - Dropdown -->
-                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                <h6 class="m-0 font-weight-bold text-primary prim-text">Earnings Overview</h6>
-                                <div class="dropdown no-arrow">
-                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                                        <div class="dropdown-header">Graph Specifics</div>
-                                        <a class="dropdown-item" href="#">Monthly</a>
-                                        <a class="dropdown-item" href="#">Daily</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card Body -->
-                            <div class="card-body">
-                                <div class="chart-area">
-                                    <canvas id="myAreaChart"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Pie Chart -->
+                    <!-- Companies Worked With -->
                     <div class="col-xl-4 col-lg-5">
                         <div class="card shadow mb-4">
                             <!-- Card Header - Dropdown -->
                             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                <h6 class="m-0 font-weight-bold text-primary">Equity Owned</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">Companies Worked With</h6>
                             </div>
                             <!-- Card Body -->
                             <div class="card-body">
-                                <div class="chart-pie pt-4 pb-2">
-                                    <canvas id="myPieChart"></canvas>
-                                </div>
-                                <div class="mt-4 text-center small">
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-blue"></i> Company
-                    </span>
-                                    <span class="mr-2">
-                      <i class="fas fa-circle text-success"></i> Investors
-                    </span>
-                                    <span class="mr-2">
-                      <i class="fas fa-circle text-info"></i> Other
-                    </span>
-                                </div>
+                                <ul>
+                                    <li>
+                                        Lorem
+                                    </li>
+                                    <li>
+                                        Lorem
+                                    </li>
+                                    <li>
+                                        Lorem
+                                    </li>
+                                    <li>
+                                        Lorem
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- About -->
+                    <div class="col-xl-8 col-lg-7">
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Dropdown -->
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary prim-text">About</h6>
+                            </div>
+                            <!-- Card Body -->
+                            <div class="card-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Content Row -->
+                <!--Content Row -->
                 <div class="row">
 
-                    <!-- Content Column -->
-                    <div class="col-lg-6 mb-4">
-
-                        <!-- Bar Chart -->
-                        <div class="card shadow mb-4">
-                            <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Spending</h6>
-                            </div>
-                            <div class="card-body">
-                                <div class="chart-bar">
-                                    <canvas id="myBarChart"></canvas>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Pie Chart -->
-                    <div class="col-lg-6 mb-4">
+                    <!-- Companies Worked With -->
+                    <div class="col-xl-4 col-lg-5">
                         <div class="card shadow mb-4">
                             <!-- Card Header - Dropdown -->
                             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                <h6 class="m-0 font-weight-bold text-primary">Spending Percentage</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">Skills</h6>
                             </div>
                             <!-- Card Body -->
                             <div class="card-body">
-                                <div class="chart-pie pt-4 pb-2">
-                                    <canvas id="myPieChart2"></canvas>
-                                </div>
-                                <div class="mt-4 text-center small">
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-blue"></i> Employees
-                    </span>
-                                    <span class="mr-2">
-                      <i class="fas fa-circle text-success"></i> Materials
-                    </span>
-                                    <span class="mr-2">
-                      <i class="fas fa-circle text-info"></i> Waste
-                    </span>
-                                </div>
+                                <ul>
+                                    <li>
+                                        Lorem
+                                    </li>
+                                    <li>
+                                        Lorem
+                                    </li>
+                                    <li>
+                                        Lorem
+                                    </li>
+                                    <li>
+                                        Lorem
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
 
-
+                    <!-- About -->
+                    <div class="col-xl-8 col-lg-7">
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Dropdown -->
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary prim-text">Experience</h6>
+                            </div>
+                            <!-- Card Body -->
+                            <div class="card-body">
+                                <dl>
+                                    <dt>Coffee</dt>
+                                    <dd>- black hot drink</dd>
+                                    <hr>
+                                    <dt>Milk</dt>
+                                    <dd>- white cold drink</dd>
+                                    <hr>
+                                    <dt>Coffee</dt>
+                                    <dd>- black hot drink</dd>
+                                    <hr>
+                                    <dt>Milk</dt>
+                                    <dd>- white cold drink</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>

@@ -79,13 +79,6 @@
                 <span>Business Professionals</span></a>
         </li>
 
-        <!-- Nav Item - Tables -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="findStartup.php">
-                <i class="fas fa-fw fa-user-friends"></i>
-                <span>Startups</span></a>
-        </li>
-
         <!-- Divider -->
         <hr class="sidebar-divider">
 

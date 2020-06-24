@@ -72,18 +72,11 @@
             </a>
         </li>
 
-        <!-- Nav Item - Charts -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="findBP.php">
-                <i class="fas fa-fw fa-chalkboard-teacher"></i>
-                <span>Business Professionals</span></a>
-        </li>
-
         <!-- Nav Item - Tables -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="findComp.php">
+            <a class="nav-link collapsed" href="findStartup.php">
                 <i class="fas fa-fw fa-user-friends"></i>
-                <span>Companies</span></a>
+                <span>Startups</span></a>
         </li>
 
         <!-- Divider -->

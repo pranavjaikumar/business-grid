@@ -64,15 +64,7 @@
             Connect
         </div>
 
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="findAI.php">
-                <i class="fas fa-fw fa-money-bill-wave"></i>
-                <span>Angel Investors</span>
-            </a>
-        </li>
-
-        <!-- Nav Item - Charts -->
+         <!-- Nav Item - Charts -->
         <li class="nav-item">
             <a class="nav-link collapsed" href="findBP.php">
                 <i class="fas fa-fw fa-chalkboard-teacher"></i>
@@ -81,9 +73,9 @@
 
         <!-- Nav Item - Tables -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="findComp.php">
+            <a class="nav-link collapsed" href="findStartup.php">
                 <i class="fas fa-fw fa-user-friends"></i>
-                <span>Companies</span></a>
+                <span>Startups</span></a>
         </li>
 
         <!-- Divider -->

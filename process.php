@@ -45,7 +45,8 @@ if (!empty($_POST['register'])) {
     $earnings = $_POST["earnings"];
     $spending = $_POST["spending"];
     $service = $_POST["service"];
-    mysqli_query($link, "INSERT INTO startup_profile VALUES ('$id', '$experience', '$sector', '$strategy', '$earnings', '$spending', '$service')");
+    $name = $_POST["name"];
+    mysqli_query($link, "INSERT INTO startup_profile VALUES ('$id', '$experience', '$sector', '$strategy', '$earnings', '$spending', '$service', '$name')");
 } else if (!empty($_POST['bpSetup'])) {
     $id = $_SESSION['id'];
     $experience = $_POST["experience"];

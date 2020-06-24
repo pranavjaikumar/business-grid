@@ -26,8 +26,8 @@
 <div id="wrapper">
     <style>
         .primary-background {
-            background-color: #1cc88a;
-            background-image: linear-gradient(180deg, #61E8C6 1%, #1cc88a 100%);
+            background-color: #0099ff;
+            background-image: linear-gradient(180deg, #00c3ff 1%, #0099ff 100%);
             background-size: cover;
         }
     </style>
@@ -345,7 +345,7 @@
                     <div class="col-xl-4 col-md-6 mb-4">
                         <div class="card">
                             <div class="card-body">
-                                <a style="color: #224abe" class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a style="color: #224abe"  class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fas fa-sort fa-sm"></i>
                                     <span>Sort by Sector</span>
                                 </a>
@@ -370,7 +370,7 @@
                     <div class="col-xl-4 col-md-6 mb-4">
                         <div class="card">
                             <div class="card-body">
-                                <a style="color: goldenrod" class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a style="color: goldenrod"  class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fas fa-filter fa-sm"></i>
                                     <span>Filter</span>
                                 </a>
@@ -418,7 +418,7 @@
                                     <div class="col-xl-4 col-md-6 mb-4">
                                         <div class="card">
                                             <div class="card-body">
-                                                <a style="color: limegreen" class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <a style="color: #0099ff"  class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="fas fa-user fa-sm"></i>
                                                     <span>John Doe</span>
                                                     <ul>
@@ -435,7 +435,7 @@
                                     <div class="col-xl-4 col-md-6 mb-4">
                                         <div class="card">
                                             <div class="card-body">
-                                                <a style="color: limegreen" class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <a style="color: #0099ff"  class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="fas fa-user fa-sm"></i>
                                                     <span>John Doe</span>
                                                     <ul>
@@ -452,7 +452,7 @@
                                     <div class="col-xl-4 col-md-6 mb-4">
                                         <div class="card">
                                             <div class="card-body">
-                                                <a style="color: limegreen" class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <a style="color: #0099ff"  class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="fas fa-user fa-sm"></i>
                                                     <span>John Doe</span>
                                                     <ul>
@@ -471,7 +471,7 @@
                                     <div class="col-xl-4 col-md-6 mb-4">
                                         <div class="card">
                                             <div class="card-body">
-                                                <a style="color: limegreen" class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <a style="color: #0099ff" class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="fas fa-user fa-sm"></i>
                                                     <span>John Doe</span>
                                                     <ul>
@@ -488,7 +488,7 @@
                                     <div class="col-xl-4 col-md-6 mb-4">
                                         <div class="card">
                                             <div class="card-body">
-                                                <a style="color: limegreen" class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <a style="color: #0099ff" class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="fas fa-user fa-sm"></i>
                                                     <span>John Doe</span>
                                                     <ul>
@@ -505,7 +505,7 @@
                                     <div class="col-xl-4 col-md-6 mb-4">
                                         <div class="card">
                                             <div class="card-body">
-                                                <a style="color: limegreen" class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <a style="color: #0099ff" class="nav-link" href="#" id="sortDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     <i class="fas fa-user fa-sm"></i>
                                                     <span>John Doe</span>
                                                     <ul>

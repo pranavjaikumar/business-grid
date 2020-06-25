@@ -57,6 +57,12 @@ html {
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
+
+.imgresize {
+  max-width: 25%;
+  height: auto;
+}
+
 .bg-login-ima {
   background-image: url("img/handshake.jpg");
   background-position: center;

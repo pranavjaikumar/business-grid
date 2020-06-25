@@ -40,10 +40,7 @@ session_start();
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="AboutUs.html">
-            <div class="sidebar-brand-icon">
-                <i class="fas fa-fw fa-handshake"></i>
-            </div>
-            <div class="sidebar-brand-text mx-3"><sup>The</sup>Business<sup>Grid</sup></div>
+            <div class="sidebar-brand-text mx-3"><img class="imgresize" src="img/tbg_white.png"><sup>The</sup>Business<sup>Grid</sup></div>
         </a>
 
         <!-- Divider -->

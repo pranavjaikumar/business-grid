@@ -412,26 +412,26 @@ session_start();
                                                     <span>
                                                         <?php
                                                         include "config.php";
-                                                        $investor_profiles = mysqli_query($link, "SELECT * FROM ai_profile");
-                                                        $profile = mysqli_fetch_array($investor_profiles);
+                                                        $startup_profiles = mysqli_query($link, "SELECT * FROM startup_profile");
+                                                        $profile = mysqli_fetch_array($startup_profiles);
                                                         $id = $profile['id'];
-                                                        $investor_user = mysqli_query($link, "SELECT * FROM users WHERE id = '$id'");
-                                                        $user = mysqli_fetch_array($investor_user);
-                                                        echo $user['first_name'] . " " . $user['last_name'];
+                                                        $startup_user = mysqli_query($link, "SELECT * FROM users WHERE id = '$id'");
+                                                        $user = mysqli_fetch_array($startup_user);
+                                                        echo $profile['name'];
                                                         ?>
                                                     </span>
                                                     <ul>
-                                                        <li>Expertise: </li>
+                                                        <li>Looking for: </li>
+                                                        <?php
+                                                        echo $profile['service'];
+                                                        ?>
+                                                        <li>Primary Sector: </li>
                                                         <?php
                                                         echo $profile['sector'];
                                                         ?>
-                                                        <li>Capital Willing to Invest: </li>
+                                                        <li>Earnings to date: </li>
                                                         <?php
-                                                        echo $profile['investment'];
-                                                        ?>
-                                                        <li>Current Position: </li>
-                                                        <?php
-                                                        echo $profile['title'] . " at " . $profile['employer'];
+                                                        echo "$" . number_format($profile['earnings']);
                                                         ?>
                                                     </ul>
                                                     <i class="fas fa-mail-bulk fa-lg"></i>

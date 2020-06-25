@@ -430,7 +430,7 @@
                         <div class="card shadow mb-4">
                             <!-- Card Header - Dropdown -->
                             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                <h6 class="m-0 font-weight-bold text-primary">Equity Owned</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">Earning vs Spending</h6>
                             </div>
                             <!-- Card Body -->
                             <div class="card-body">
@@ -439,13 +439,10 @@
                                 </div>
                                 <div class="mt-4 text-center small">
                     <span class="mr-2">
-                      <i class="fas fa-circle text-blue"></i> Company
+                      <i class="fas fa-circle text-blue"></i> Earnings
                     </span>
                                     <span class="mr-2">
-                      <i class="fas fa-circle text-success"></i> Investors
-                    </span>
-                                    <span class="mr-2">
-                      <i class="fas fa-circle text-info"></i> Other
+                      <i class="fas fa-circle text-success"></i> Spending
                     </span>
                                 </div>
                             </div>
@@ -564,7 +561,53 @@
 
 <!-- Page level custom scripts -->
 <script src="js/demo/chart-area-demo.js"></script>
-<script src="js/demo/chart-pie-demo.js"></script>
+<?php
+    include "config.php";
+    $result = mysqli_query($link, "SELECT earnings, spending FROM startup_profile WHERE id='18'");
+    $row = mysqli_fetch_array($result);
+    $earnings = $row['earnings'];
+    $spending = $row['spending'];
+?>
+<script>
+// Set new default font family and font color to mimic Bootstrap's default styling
+Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+Chart.defaults.global.defaultFontColor = '#858796';
+
+// Pie Chart Example
+var ctx = document.getElementById("myPieChart");
+var earnings = <?php echo $earnings ?>;
+var spending = <?php echo $spending ?>;
+var myPieChart = new Chart(ctx, {
+  type: 'doughnut',
+  data: {
+    labels: ["Earnings", "Spending", "Social"],
+    datasets: [{
+      data: [earnings, spending],
+      backgroundColor: ['#224abe', '#1cc88a', '#36b9cc'],
+      hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
+      hoverBorderColor: "rgba(234, 236, 244, 1)",
+    }],
+  },
+  options: {
+    maintainAspectRatio: false,
+    tooltips: {
+      backgroundColor: "rgb(255,255,255)",
+      bodyFontColor: "#858796",
+      borderColor: '#dddfeb',
+      borderWidth: 1,
+      xPadding: 15,
+      yPadding: 15,
+      displayColors: false,
+      caretPadding: 10,
+    },
+    legend: {
+      display: false
+    },
+    cutoutPercentage: 80,
+  },
+});
+
+</script>
 <script src="js/demo/chart-bar-demo.js"></script>
 <script src="js/demo/chart-pie-2.js"></script>
 

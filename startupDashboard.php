@@ -563,7 +563,8 @@
 <script src="js/demo/chart-area-demo.js"></script>
 <?php
     include "config.php";
-    $result = mysqli_query($link, "SELECT earnings, spending FROM startup_profile WHERE id='18'");
+    $id = $_SESSION['id'];  
+    $result = mysqli_query($link, "SELECT earnings, spending FROM startup_profile WHERE id='$id'");
     $row = mysqli_fetch_array($result);
     $earnings = $row['earnings'];
     $spending = $row['spending'];

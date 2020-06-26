@@ -448,17 +448,17 @@ session_start();
                             <!-- Card Body -->
                             <div class="card-body">
                                 <dl>
-                                    <dt>Coffee</dt>
-                                    <dd>- black hot drink</dd>
+                                    <dt><p contenteditable="true">Coffee</p></dt>
+                                    <dd> <p contenteditable="true">- Coffee</p></dd>
                                     <hr>
-                                    <dt>Milk</dt>
-                                    <dd>- white cold drink</dd>
+                                    <dt><p contenteditable="true">Coffee</p></dt>
+                                    <dd> <p contenteditable="true">- Coffee</p></dd>
                                     <hr>
-                                    <dt>Coffee</dt>
-                                    <dd>- black hot drink</dd>
+                                    <dt><p contenteditable="true">Coffee</p></dt>
+                                    <dd><p contenteditable="true">- Coffee</p></dd>
                                     <hr>
-                                    <dt>Milk</dt>
-                                    <dd>- white cold drink</dd>
+                                    <dt><p contenteditable="true">Coffee</p></dt>
+                                    <dd> <p contenteditable="true">- Coffee</p></dd>
                                 </dl>
                             </div>
                         </div>

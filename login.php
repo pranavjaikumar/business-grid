@@ -9,7 +9,7 @@
 
     $query = mysqli_query($link, "SELECT * FROM users WHERE email = '$email'");
     $row = mysqli_fetch_array($query);
-    if (password_verify($password, $row['password'])) {
+    if ($row && password_verify($password, $row['password'])) {
         $_SESSION["id"] = $row['id'];
         $_SESSION["first_name"] = $row['first_name'];
         $_SESSION["last_name"] = $row['last_name'];
@@ -21,7 +21,8 @@
             header("Location: aiDashboard.php");
         }
     } else {
-        header('Location: loginPage.html');
+        echo "Login failed!";
+        header('refresh:2; url=loginPage.html');
     }
 
 ?>

@@ -1,19 +1,16 @@
 // Call the dataTables jQuery plugin
-$(document).ready(function() {
-  $('#example').DataTable( {
-    "processing": true,
-    "serverSide": true,
-    "ajax": {
-      "url": "scripts/post.php",
-      "type": "POST"
-    },
-    "columns": [
-      { "data": "first_name" },
-      { "data": "last_name" },
-      { "data": "position" },
-      { "data": "office" },
-      { "data": "start_date" },
-      { "data": "salary" }
-    ]
-  } );
-} );
+$('#dataTable').DataTable({
+  ajax: {
+    url: 'test.json',
+    dataSrc: "data"
+  },
+  columns: [
+    { data: 'first_name' },
+    { data: 'last_name' },
+    { data: 'sector' },
+    { data: 'employer' },
+    { data: 'title' },
+    { data: 'investment' },
+  ],
+  "pageLength": 10
+});

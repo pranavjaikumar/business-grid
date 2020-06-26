@@ -1,5 +1,6 @@
 <?php
 require("aiTables.php");
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">

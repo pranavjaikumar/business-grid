@@ -670,6 +670,7 @@ session_start();
                                     </div>
                                 </div>
                             </div>
+                            <a href="aiForumVM.php" class="btn btn-primary">View More</a>
                         </div>
                     </div>
 

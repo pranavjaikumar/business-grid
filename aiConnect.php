@@ -669,6 +669,7 @@ session_start();
                                     </div>
                                 </div>
                             </div>
+                            <a href="aiStartVM.php" class="btn btn-primary">View More</a>
                         </div>
                     </div>
 

@@ -688,6 +688,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <a href="sAIvm.php" class="btn btn-primary">View More</a>
                         </div>
                     </div>
 

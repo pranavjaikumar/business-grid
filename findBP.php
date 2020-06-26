@@ -688,6 +688,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <a href="sBPvm.php" class="btn btn-primary">View More</a>
                         </div>
                     </div>
 

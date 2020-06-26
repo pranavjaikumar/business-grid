@@ -672,6 +672,7 @@ session_start();
                                     </div>
                                 </div>
                             </div>
+                            <a href="bpStartVM.php" class="btn btn-primary">View More</a>
                         </div>
                     </div>
 

@@ -1,7 +1,7 @@
 // Call the dataTables jQuery plugin
-$('#dataTable').DataTable({
+$('#sAItable').DataTable({
   ajax: {
-    url: 'test.json',
+    url: 'sAI.json',
     dataSrc: "data"
   },
   columns: [

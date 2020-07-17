@@ -1,3 +1,11 @@
 <?php
-include "config.php";
-mysqli_query($link, "SELECT JSON_OBJECT('id',id,'name',name,'description',description,'price',price) INTO OUTFILE '' FROM furniture");
+    include('config.php');
+    if ($link) {
+        $query = mysqli_query($link, "SELECT * FROM users");
+        $row = mysqli_fetch_array($query);
+        echo "Database connection successful!";
+        echo "The user's name is " . $row['first_name'] . " " . $row['last_name'];
+    } else {
+        echo "Database connection failed.";
+    }
+?>

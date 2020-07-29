@@ -1,5 +1,5 @@
 <?php
-require("startupTables.php");
+require("../startupTables.php");
 session_start();
 ?>
 <!DOCTYPE html>

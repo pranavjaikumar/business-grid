@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>The Business Grid</title>
+    <link rel="icon" type="image/x-icon" href="../img/tbgblueicon.ico" />
+
+    <!-- Custom fonts for this template-->
+    <link href="../external/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="../css/theBG.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gradient-primary">
+<style>
+    body {
+        background-color: #0099ff;
+    }
+</style>
+
+<div class="container">
+
+    <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="p-5">
+                        <div class="text-center">
+                            <h1 class="h4 text-gray-900 mb-4">Setup your Angel Investor Account!</h1>
+                        </div>
+                        <form class="user" action="../process.php" method="post">
+                            <div class="form-group">
+                                <input class="form-control form-control-user" list="expTypes" name="experience" id="expType" placeholder="Experience with Angel investing">
+                                <datalist id="expTypes">
+                                    <option value="I consistently invest in Startups">
+                                    <option value="I have invested in Startups before">
+                                    <option value="I have no experience, but I want to get started">
+                                </datalist>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control form-control-user" list="secTypes" name="sector" id="secType" placeholder="What sector are you most likely to invest in?">
+                                <datalist id="secTypes">
+                                    <option value="Technology">
+                                    <option value="E-commerce">
+                                    <option value="Retail">
+                                    <option value="Life Sciences">
+                                    <option value="Fashion">
+                                    <option value="Consumer Products">
+                                    <option value="Food and Beverage">
+                                    <option value="Financial Services">
+                                    <option value="Travel and Transportation">
+                                </datalist>
+                            </div>
+
+                            <div class="form-group">
+                                <input class="form-control form-control-user" list="invTypes" name="commitment" id="stratType" placeholder="What is your Investment Strategy?">
+                                <datalist id="invTypes">
+                                    <option value="Short Term: Less than 6 months ROI">
+                                    <option value="Long Term: 6 months to 2 years">
+                                    <option value="Equity: Stake in the company">
+                                </datalist>
+                            </div>
+                            <!-- End Choose type -->
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input type="text" class="form-control form-control-user" id="exampleInputPassword" placeholder="Current company/ employer" name = "employer">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Current title" name = "title">
+                                </div>
+                            </div>
+                            <!-- Choose type -->
+                            <div class="form-group">
+                                <input class="form-control form-control-user" list="busTypes" name="investment" id="busType" placeholder="How much are you willing to invest">
+                                <datalist id="busTypes">
+                                    <option value="Up to $1,000">
+                                    <option value="Up to $5,000">
+                                    <option value="Up to $10,000">
+                                    <option value="Up to $50,000">
+                                    <option value="$50,000+">
+                                </datalist>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit"name = "aiSetup" value="Finish Setup" class="btn btn-primary btn-user btn-block">
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Bootstrap core JavaScript-->
+<script src="../external/jquery/jquery.min.js"></script>
+<script src="../external/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="../external/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="../js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>

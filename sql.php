@@ -7,7 +7,7 @@
         mysqli_query($link, "TRUNCATE TABLE startup_profile");
         mysqli_query($link, "TRUNCATE TABLE bp_profile");
         mysqli_query($link, "TRUNCATE TABLE ai_profile");
-        for ($i = 0; $i < 300; $i++) {
+        for ($i = 0; $i < 150; $i++) {
             $first_name = "test";
             $last_name = strval($i);
             $email = $first_name . $last_name . "@gmail.com";

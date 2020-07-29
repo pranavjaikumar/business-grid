@@ -1,6 +1,6 @@
 <?php
 session_start();
-require("startupTables.php");
+require("../startupTables.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

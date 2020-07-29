@@ -430,7 +430,7 @@
                                                     <i class="fas fa-user fa-sm"></i>
                                                     <span>
                                                         <?php
-                                                            include "config.php";
+                                                            include "../config.php";
                                                             $startup_profiles = mysqli_query($link, "SELECT * FROM startup_profile");
                                                             $profile = mysqli_fetch_array($startup_profiles);
                                                             $id = $profile['id'];

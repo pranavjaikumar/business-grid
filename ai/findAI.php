@@ -430,7 +430,7 @@
                                                     <i class="fas fa-user fa-sm"></i>
                                                     <span>
                                                         <?php
-                                                            include "config.php";
+                                                            include "../config.php";
                                                             $investor_profiles = mysqli_query($link, "SELECT * FROM ai_profile");
                                                             $profile = mysqli_fetch_array($investor_profiles);
                                                             $id = $profile['id'];

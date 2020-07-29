@@ -333,7 +333,7 @@ session_start();
                                             <div class="text-left">
                                                 <h3 class="h6 text-gray-900 mb-4">
                                                     <?php
-                                                        include "config.php";
+                                                        include "../config.php";
                                                         $id = $_SESSION['id'];
                                                         $ai_profiles = mysqli_query($link, "SELECT * FROM ai_profile WHERE id='$id'");
                                                         $profile = mysqli_fetch_array($ai_profiles);

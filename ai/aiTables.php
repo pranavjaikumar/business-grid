@@ -1,5 +1,5 @@
 <?php
-include("config.php");
+include("../config.php");
 $aiForum = mysqli_query($link, "SELECT users.first_name, users.last_name, ai_profile.sector, ai_profile.employer, ai_profile.title, ai_profile.investment
 FROM users
 RIGHT JOIN ai_profile ON users.id = ai_profile.id

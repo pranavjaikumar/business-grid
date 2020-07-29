@@ -14,11 +14,11 @@
         $_SESSION["first_name"] = $row['first_name'];
         $_SESSION["last_name"] = $row['last_name'];
         if ($row['type'] == "Startup") {
-            header("Location: startupDashboard.php");
+            header("Location: startup/startupDashboard.php");
         } else if ($row['type'] == "Business Professional") {
-            header("Location: bpDashboard.php");
+            header("Location: bp/bpDashboard.php");
         } else {
-            header("Location: aiDashboard.php");
+            header("Location: ai/aiDashboard.php");
         }
     } else {
         echo "Login failed!";

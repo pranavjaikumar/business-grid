@@ -28,11 +28,11 @@ if (!empty($_POST['register'])) {
     $_SESSION["last_name"] = $row['last_name'];
     //or die("Error ".mysql_error());
     if ($type == "Startup") {
-        header("Location: startUpSetup.html");
+        header("Location: startup/startUpSetup.html");
     } else if ($type == "Business Professional") {
-        header("Location: bpSetup.html");
+        header("Location: bp/bpSetup.html");
     } else if ($type == "Angel Investor") {
-        header("Location: aiSetup.html");
+        header("Location: ai/aiSetup.html");
     } else {
         header("Location: loginPage.html");
     }

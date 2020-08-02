@@ -66,7 +66,9 @@ if (!empty($_POST['register'])) {
     $investment = $_POST["investment"];
     mysqli_query($link, "INSERT INTO ai_profile VALUES ('$id', '$experience', '$sector', '$commitment', '$employer', '$title', '$investment')");
 }
-$_SESSION = array();
+$id = $_SESSION['id'];
+mysqli_query($link, "INSERT INTO general_profile VALUES ('$id', '' , '' , '', '')");
 session_destroy();
+$_SESSION = array();
 header("Location: loginPage.html");
 ?>

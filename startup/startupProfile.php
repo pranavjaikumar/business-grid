@@ -345,7 +345,7 @@ session_start();
                                             <div class="text-center">
                                                 <h1 class="h4 text-gray-900 mb-4">
                                                     <?php
-                                                        include "config.php";
+                                                        include "../config.php";
                                                         $id = $_SESSION['id'];
                                                         $startup_profiles = mysqli_query($link, "SELECT * FROM startup_profile WHERE id='$id'");
                                                         $profile = mysqli_fetch_array($startup_profiles);
@@ -373,9 +373,10 @@ session_start();
                             <!-- Card Header - Dropdown -->
                             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                 <h6 class="m-0 font-weight-bold text-primary">Companies Worked With</h6>
+                                <a href="" id="compE">Edit</a>
                             </div>
                             <!-- Card Body -->
-                            <div class="card-body">
+                            <div class="card-body" id="comp">
                                 <ul>
                                     <li>
                                         Lorem
@@ -400,10 +401,19 @@ session_start();
                             <!-- Card Header - Dropdown -->
                             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                 <h6 class="m-0 font-weight-bold text-primary prim-text">About</h6>
+                                <input id="abtE" type="button" value="Save" />
                             </div>
+                            <?php
+                            ini_set('display_errors',0);
+                            include("../config.php");
+                            $user_id = $_SESSION['id'];
+                            $sql=mysqli_query($link,"select about from general_profile where id ='$user_id'");
+                            $row=mysqli_fetch_array($sql);
+                            $about=$row['about'];
+                            ?>
                             <!-- Card Body -->
-                            <div class="card-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="card-body abt" contenteditable="true">
+                                <?php echo $about; ?>
                             </div>
                         </div>
                     </div>
@@ -418,9 +428,10 @@ session_start();
                             <!-- Card Header - Dropdown -->
                             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                 <h6 class="m-0 font-weight-bold text-primary">Skills</h6>
+                                <a href="" id="skillE">Edit</a>
                             </div>
                             <!-- Card Body -->
-                            <div class="card-body">
+                            <div class="card-body" id="skills">
                                 <ul>
                                     <li>
                                         Lorem
@@ -441,13 +452,14 @@ session_start();
 
                     <!-- About -->
                     <div class="col-xl-8 col-lg-7">
-                        <div class="card shadow mb-4">
+                        <div class="card shadow mb-4" >
                             <!-- Card Header - Dropdown -->
                             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                 <h6 class="m-0 font-weight-bold text-primary prim-text">Experience</h6>
+                                <a id="expE">Edit</a>
                             </div>
                             <!-- Card Body -->
-                            <div class="card-body">
+                            <div class="card-body" id="exp">
                                 <dl>
                                     <dt>Coffee</dt>
                                     <dd>- black hot drink</dd>
@@ -468,6 +480,20 @@ session_start();
 
             </div>
             <!-- /.container-fluid -->
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+            <script>
+                $('#abtE').click(function(){
+                    $edit = $('.abt').html();
+                    $.ajax({
+                        url: '../edit.php',
+                        type: 'post',
+                        data: {data: $edit},
+                        datatype: 'html',
+                    });
+
+                });
+            </script>
+
 
         </div>
         <!-- End of Main Content -->

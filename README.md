@@ -1,7 +1,8 @@
 TheBusinessGrid
 Improvements: 
-Update logo
+Update logo and landing page
 Change setup questions from bus list to drop-down
+Change content of setup questions
 Email authentication after create account
 Forgot password functionality
 Facebook and Gmail login
